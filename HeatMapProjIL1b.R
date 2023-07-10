@@ -20,10 +20,8 @@ for (gene in list) {
   row <- (df2[df2$V1 %like% geneTitle, ])
   df3[nrow(df3) + 1,] <- row
 }
-head(df3)
 rownames(df3) <- NULL
 colnames(df3) <- df2[1, ]
-head(df3)
 dfWT = subset(df3, select = c(gene_id, D6, B06, C06, D9, A12, D12))
 dfWT$gene_id <- gsub('.*_','',dfWT$gene_id)
 set.seed(123)
