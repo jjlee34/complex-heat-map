@@ -17,16 +17,14 @@ for (gene in list) {
   if (nrow(df2[df2$V1 %like% geneTitle, ]) == 0) {
     next
   }
-  row <- (df2[df2$V1 %like% geneTitle, ])
-  df3[nrow(df3) + 1,] <- row
+  df3[nrow(df3) + 1,] <- (df2[df2$V1 %like% geneTitle, ])
 }
 rownames(df3) <- NULL
 colnames(df3) <- df2[1, ]
 dfWT = subset(df3, select = c(genes, D6, B06, C06, D9, A12, D12))
 dfWT$genes <- gsub('.*_','',dfWT$genes)
-set.seed(123)
-#mat = data.matrix(subset(df3, select = c(D6, B06, C06, D9, A12, D12)))
-mat = data.matrix(subset(df3, select = c(B06, C06, A12, D12)))
+#mat = data.matrix(subset(dfWT, select = c(D6, B06, C06, D9, A12, D12)))
+mat = data.matrix(subset(dfWT, select = c(B06, C06, A12, D12)))
 #col = data.frame("V1"= c("Vg6_naive_WT1", "Vg6_naive_WT2", "Vg6_naive_WT3", "Vg6_treat_WT1", "Vg6_treat_WT2", "Vg6_treat_WT3"))
 col = data.frame("V1"= c("Vg6_naive_WT2", "Vg6_naive_WT3", "Vg6_treat_WT2", "Vg6_treat_WT3"))
 rownames(mat) = toupper(dfWT$genes)
