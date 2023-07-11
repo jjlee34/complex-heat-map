@@ -9,3 +9,5 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
 BiocManager::install("ComplexHeatmap")
+
+For comments, please refer to HeatMapProjRawData. All files have near identical code but were used for different data sets.
