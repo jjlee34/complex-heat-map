@@ -1,3 +1,5 @@
+#This is the sample code for creating a simple heatmap in R
+
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("ComplexHeatmap", force = TRUE) #installs ComplexHeatmap library
@@ -8,7 +10,6 @@ install.packages(janitor)
 install.packages(devtools)
 install.packages(ComplexHeatmap)
 install.packages(circilize)
-
 library(readxl)
 library(stringr)
 library(data.table)
