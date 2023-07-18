@@ -1,6 +1,6 @@
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-BiocManager::install("ComplexHeatmap", force = TRUE)
+BiocManager::install("ComplexHeatmap", force = TRUE) #installs ComplexHeatmap library
 install.packages(readxl)
 install.packages(stringr)
 install.packages(data.table)
@@ -8,6 +8,7 @@ install.packages(janitor)
 install.packages(devtools)
 install.packages(ComplexHeatmap)
 install.packages(circilize)
+
 library(readxl)
 library(stringr)
 library(data.table)
